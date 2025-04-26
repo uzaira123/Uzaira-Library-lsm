@@ -115,16 +115,16 @@ def load_lottieurl(url):
             st.session_state.current_view ="Library"   
 
  #load library
- def load_library():
-    try:
-        if os.path.exists('Library.json'):
-        with open('library.json','r') as file:
-            st.session_state.library = json.load(file)
-            return True
-        return False
-    except Exception as e:
-        st.error(f"Error loading library:{e}")
-        return False
+ # def load_library():
+ #    try:
+ #        if os.path.exists('Library.json'):
+ #        with open('library.json','r') as file:
+ #            st.session_state.library = json.load(file)
+ #            return True
+ #        return False
+ #    except Exception as e:
+ #        st.error(f"Error loading library:{e}")
+ #        return False
 
 #savelibrary
  def save_library():
