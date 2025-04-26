@@ -18,37 +18,67 @@ st.set_page_config(
 # Custom CSS for styling
 st.markdown("""
 <style>
+    body {
+        background-color: #000000;
+        color: #FFFFFF;
+    }
     .main-header {
-        font-size: 3rem;
-        color: #1E3A8A;
-        font-weight: bold;
+        font-size: 3rem !important;
+        color: #60A5FA;
+        font-weight: 700;
+        margin-bottom: 1rem;
         text-align: center;
+        text-shadow: 2px 2px 4px rgba(255,255,255,0.1);
     }
     .sub-header {
-        font-size: 1.8rem;
-        color: #3B82F6;
+        font-size: 1.8rem !important;
+        color: #93C5FD;
         font-weight: 600;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
     .success-message {
-        background-color: #ECFDF5;
-        border-left: 5px solid #10B981;
         padding: 1rem;
-        border-radius: 5px;
+        background-color: #065F46;
+        border-left: 5px solid #10B981;
+        border-radius: 0.375rem;
+        color: white;
     }
     .warning-message {
-        background-color: #FEF3C7;
-        border-left: 5px solid #F59E0B;
         padding: 1rem;
-        border-radius: 5px;
+        background-color: #92400E;
+        border-left: 5px solid #F59E0B;
+        border-radius: 0.375rem;
+        color: white;
     }
     .book-card {
-        background-color: #F3F4F6;
+        background-color: #1F2937;
+        border-radius: 0.5rem;
         padding: 1rem;
-        border-radius: 10px;
         margin-bottom: 1rem;
+        border-left: 5px solid #3B82F6;
+        transition: transform 0.3s ease;
+        color: white;
+    }
+    .read-badge {
+        background-color: #10B981;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+    }
+    .unread-badge {
+        background-color: #EF4444;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+        font-size: 0.875rem;
+        font-weight: 600;
     }
 </style>
 """, unsafe_allow_html=True)
+
 
 # Helper functions
 def load_library():
