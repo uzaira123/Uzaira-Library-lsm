@@ -115,7 +115,7 @@ def load_lottieurl(url):
             st.session_state.current_view =False   
 
  #load library
-  def load_library():
+def load_library():
     try:
         if os.path.exists('Library.json'):
         with open('library.json','r') as file:
@@ -127,7 +127,7 @@ def load_lottieurl(url):
         return False
 
 #savelibrary
- def save_library():
+def save_library():
     try:
         with open('library.json','w') as file:
            json.dump(st.session_state.library, file)
